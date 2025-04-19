@@ -14,15 +14,13 @@
 
 <!-- It is a still in early stage of development, so expects bugs, crashes and logical erros.-->
 
-<!-- Standalone Plugin for [JADX](https://github.com/skylot/jadx) (Started as Fork) with Model Context Protocol (MCP) integration for AI-powered static code analysis and real-time code review and reverse engineering tasks using Claude.-->
-
 ![apktool-mcp-server-banner.png](docs/assets/apktool-mcp-server-banner.png) Image generated using AI tools.
 
 ---
 
 ## 🤖 What is apktool-mcp-server?
 
-**apktool-mcp-server** is a plugin for the [JADX decompiler](https://github.com/skylot/jadx) that integrates directly with [Model Context Protocol (MCP)](https://github.com/anthropic/mcp) to provide **live reverse engineering support with LLMs like Claude**.
+**apktool-mcp-server** is a MCP server for the [Apk Tool](https://github.com/iBotPeaches/apktool) that integrates directly with [Model Context Protocol (MCP)](https://github.com/anthropic/mcp) to provide **live reverse engineering support with LLMs like Claude**.
 
 Think: "Decompile → Context-Aware Code Review → AI Recommendations" — all in real time.
 
@@ -30,10 +28,6 @@ Watch the demo!
 **TODO**
 
 <!-- Place youtube video -->
-
-## 🤖 What is apktool-mcp-server?
-
-**JADX MCP Server** is a standalone Python server that interacts with a `apktool-mcp-server` plugin (see: [apktool-mcp-server](https://github.com/zinja-coder/apktool-mcp-server)) via MCP (Model Context Protocol). It lets LLMs communicate with the decompiled Android app context live.
 
 ## Current MCP Tools
 
@@ -49,26 +43,39 @@ The following MCP tools are available:
 
 🔍 Basic Code Understanding
 
+**TODO**
+
 🛡️ Vulnerability Detection
+
+**TODO**
 
 🛠️ Reverse Engineering Helpers
 
+**TODO**
+
 📦 Static Analysis
+
+**TODO**
 
 🤖 AI Code Modification
 
+**TODO**
+
 📄 Documentation & Metadata
+
+**TODO**
 
 ---
 
 ## 📦 Features
+
+**TODO**
 
 ---
 
 ## 🛠️ Getting Started 
 
 ### 1. Downlaod from Releases: https://github.com/zinja-coder/apktool-mcp-server/releases
-
 
 
 ```bash
@@ -144,7 +151,7 @@ The original README.md from Apktool is included here in this repository for refe
 
 Also huge thanks to [@aaddrick](https://github.com/aaddrick) for developing Claude desktop for Debian based Linux.
 
-And in last, thanks to [@anthropics](https://github.com/anthropics) for developing the Model Context Protocol and @FastMCP team.
+And in last, thanks to [@anthropics](https://github.com/anthropics) for developing the Model Context Protocol and [@FastMCP](https://github.com/jlowin/fastmcp) team.
 
 ## 📄 License
 
