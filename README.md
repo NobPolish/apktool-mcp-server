@@ -1,6 +1,6 @@
 <div align="center">
 
-# apktool-mcp-server (Part of Zin's Android Rerverse Engineering MCP Suite)
+# apktool-mcp-server (Part of Zin's Reverse Engineering MCP Suite)
 
 ![GitHub contributors apktool-mcp-server](https://img.shields.io/github/contributors/zinja-coder/apktool-mcp-server)
 ![GitHub all releases](https://img.shields.io/github/downloads/zinja-coder/apktool-mcp-server/total)
