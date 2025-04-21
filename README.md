@@ -46,48 +46,99 @@ The following MCP tools are available:
 - `list_smali_files()` — List smali files in a specific smali directory, optinally filtered by package prefix.
 - `get_smali_file()` — Get content of a specific smali file by class name. 
 - `modify_smali_file()` — Modify the content of a specific smali file. 
-- `()` — 
-- `()` — 
-- `()` — 
-- `()` — 
-- `()` — 
-- `()` — 
-- `()` — 
-- `()` — 
-- `()` — 
-- `()` — 
-- `()` — 
+- `list_resources()` — List resources in a project, optionally filtered by resource type. 
+- `get_resource_file()` — Get Content of a specific resource file. 
+- `modify_resource_file()` — Modify the content of a specific resource file. 
+- `search_in_file()` — Search for a pattern in files with specified extensions. 
+- `check_apktool_version()` — Check the installed APKTool version.
+- `sign_apk()` — Sign an APK file. 
+- `install_apk()` — Install and APK on a connected device using ADB. **// to be migrated to upcoming ADB MCP Server**
+- `extract_dex()` — Extract DEX files from original APK (if available in project).
+- `list_packages()` — List installed packages on a connected Android device using ADB. **// to be migrated to upcoming ADB MCP Server**
+- `analyze_permissions()` —  Analyze permissions declared in AndroidManifest.xml.
+- `clean_project()` — Clean a project directory to prepare for rebuilding.
+- `create_project()` — Create a new empty APKTool project structure.
+- `delete_project()` — Delete an APKTool project directory
+- `compare_smali_files()` — Compare two smali files and show differences.
+- `get_available_devices()` — Get list of available Android devices connected via ADB **// to be migrated to upcoming ADB MCP Server**
+- `decode_apk()` — Decode an APK file using APKTool, extracting resources and smali code. 
 
 ---
 
 ## 🗒️ Sample Prompts
 
-**TODO**
 
-🔍 Basic Code Understanding
+### 🔍 Basic Code Understanding
 
-**TODO**
+- “List all smali directories for the dvac project.”
 
-🛡️ Vulnerability Detection
+- “Show me all the smali files under the package prefix com.vulnerable.component in the dvac project.”
 
-**TODO**
+- “Get the smali code for the class com.vulnerable.component.MainActivity.”
 
-🛠️ Reverse Engineering Helpers
+- “Compare MainActivity.smali with its previous version and show differences.”
 
-**TODO**
+- “Search for usage of startActivity in smali files of dvac project.”
 
-📦 Static Analysis
+### 🛡️ Vulnerability Detection
 
-**TODO**
+- “Analyze declared permissions in the dvac AndroidManifest.xml and flag dangerous ones.”
 
-🤖 AI Code Modification
+- “Search for hardcoded URLs or IPs in all .xml and .smali files in the project.”
 
-**TODO**
+- “Find all uses of PendingIntent.getActivity in smali files.”
 
-📄 Documentation & Metadata
+- “Check for exported activities or receivers in dvac’s AndroidManifest.xml.”
 
-**TODO**
+- “List all smali files that access android.permission.SEND_SMS or READ_CONTACTS.”
 
+### 🛠️ Reverse Engineering Helpers
+
+- “Decode this APK: dvac.apk and create a project called dvac.”
+
+- “Create a new APKTool project called test-harness.”
+
+- “Clean the dvac project before rebuild.”
+
+- “Extract DEX files from dvac project for external analysis.”
+
+- “Modify MainActivity.smali to insert a log line at the beginning of onCreate().”
+
+### 📦 Static Analysis
+
+- “Get the complete AndroidManifest.xml from dvac project.”
+
+- “Show the contents of apktool.yml for the dvac project.”
+
+- “List all resource files of type layout.”
+
+- “Search for the word password in all resource and smali files.”
+
+- “Check which permissions are used and compare them against typical over-permissioning risks.”
+
+### 🤖 AI Code Modification
+
+- “Modify the onCreate() method in MainActivity.smali to add a toast message.”
+
+- “Replace all http:// links with https:// in strings.xml.”
+
+- “Add the android:exported=false attribute to all activities in the AndroidManifest.xml.”
+
+- “Patch the method validateLogin in LoginManager.smali to always return true.”
+
+- “Add logging statements to every method in MainActivity.smali.”
+
+### 📄 Documentation & Metadata
+
+- “List all decoded APKTool projects in the workspace.”
+
+- “Show me the apktool.yml config to review the version, original APK metadata, and compression settings.”
+
+- “Get all available Android devices connected via ADB. (To be migrated to ADB MCP Server.)”
+
+- “Get metadata about the project dvac from its apktool.yml.”
+
+- “Check which APKTool version is currently installed on the server.”
 ---
 
 ## 🛠️ Getting Started 
