@@ -38,7 +38,25 @@ Watch the demo!
 
 The following MCP tools are available:
 
-**TODO**
+- `build_apk()` — Build an APK from a decoded APKTool Project.
+- `list_workspace_projects()` — List all APKTool project direcotries in workspace. 
+- `get_manifest()` — Get the AndroidManifest.xml content from a decoded APK project. 
+- `get_apktool_yml()` — Get apktool.yml information from a decoded APK project. 
+- `list_smali_directories()` — List all smali directories in a project. 
+- `list_smali_files()` — List smali files in a specific smali directory, optinally filtered by package prefix.
+- `get_smali_file()` — Get content of a specific smali file by class name. 
+- `modify_smali_file()` — Modify the content of a specific smali file. 
+- `()` — 
+- `()` — 
+- `()` — 
+- `()` — 
+- `()` — 
+- `()` — 
+- `()` — 
+- `()` — 
+- `()` — 
+- `()` — 
+- `()` — 
 
 ---
 
@@ -67,12 +85,6 @@ The following MCP tools are available:
 **TODO**
 
 📄 Documentation & Metadata
-
-**TODO**
-
----
-
-## 📦 Features
 
 **TODO**
 
