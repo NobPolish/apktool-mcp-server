@@ -24,7 +24,13 @@
 Think: "Decompile → Context-Aware Code Review → AI Recommendations" — all in real time.
 
 Watch the demo!
-**TODO**
+
+[![Watch the video](https://img.youtube.com/vi/-CeOZfhwe1U/0.jpg)](https://www.youtube.com/watch?v=-CeOZfhwe1U)
+
+
+# Other MCP Servers For Android Reverse Engineering 
+
+ - [JADX-MCP-SERVER](https://github.com/zinja-coder/jadx-ai-mcp)
 
 <!-- Place youtube video -->
 
