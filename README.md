@@ -160,7 +160,6 @@ unzip apktool-mcp-server-<version>.zip
   ├── requirements.txt
   ├── README.md
   ├── LICENSE
-```bash
 
 # 2. Navigate to apktool-mcp-server directory
 cd apktool-mcp-server
