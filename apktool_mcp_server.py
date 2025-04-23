@@ -1258,5 +1258,5 @@ async def get_available_devices() -> Dict:
 
 
 if __name__ == "__main__":
-    import time  # Import time for backup timestamps
+    import time  # Import time for backup timestamp
     mcp.run(transport="stdio")
