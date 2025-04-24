@@ -27,8 +27,7 @@ Think: "Decompile → Context-Aware Code Review → AI Recommendations" — all 
 
 Watch the demo!
 
-[![Watch the video](https://img.youtube.com/vi/-CeOZfhwe1U/0.jpg)](https://www.youtube.com/watch?v=-CeOZfhwe1U)
-
+https://github.com/user-attachments/assets/d50251b8-6b1c-4341-b18e-ae54eb24a847
 
 # Other MCP Servers For Android Reverse Engineering 
 
