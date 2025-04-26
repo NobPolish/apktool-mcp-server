@@ -251,6 +251,10 @@ Use responsibly. Respect intellectual property. Follow ethical hacking practices
 
 ## 🙌 Contribute or Support
 
+## Contributing
+
+[![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTE.md)
+
 - Found it useful? Give it a ⭐️
 - Got ideas? Open an [issue](https://github.com/zinja-coder/apktool-mcp-server/issues) or submit a PR
 - Built something on top? DM me or mention me — I’ll add it to the README!
