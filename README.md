@@ -214,6 +214,14 @@ repository
 
 Then, navigate code and interact via real-time code review prompts using the built-in integration.
 
+## Running on Local LLM Using Ollama and Custom MPC Client
+
+!Coming Soon...
+
+## Running on Local LLM using Ollama and Open Web UI
+
+Read this Guide: https://github.com/zinja-coder/jadx-ai-mcp/blob/jadx-ai/README.md#running-on-local-llm-using-ollama-and-open-web-ui
+
 ## To report bugs, issues, feature suggestion, Performance issue, general question, Documentation issue.
  - Kindly open an issue with respective template.
 
