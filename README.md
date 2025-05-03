@@ -239,6 +239,8 @@ Also huge thanks to [@aaddrick](https://github.com/aaddrick) for developing Clau
 
 And in last, thanks to [@anthropics](https://github.com/anthropics) for developing the Model Context Protocol and [@FastMCP](https://github.com/jlowin/fastmcp) team.
 
+And all open source project maintainers and contributos which provies libraries and dependencies to make project like this possible.
+
 ## 📄 License
 
 apktool-mcp-server and all related projects inherits the Apache 2.0 
