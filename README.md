@@ -15,7 +15,13 @@
 
 <!-- It is a still in early stage of development, so expects bugs, crashes and logical erros.-->
 
-![apktool-mcp-server-banner.png](docs/assets/apktool-mcp-server-banner.png) Image generated using AI tools.
+<div align="center">
+    <img alt="banner" height="480px" widht="620px" src="docs/assets/apktool-mcp-server-banner.png">
+</div>
+
+<!--![apktool-mcp-server-banner.png](docs/assets/apktool-mcp-server-banner.png)-->
+
+Image generated using AI tools.
 
 ---
 
