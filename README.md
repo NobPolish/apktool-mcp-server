@@ -181,7 +181,21 @@ uv pip install httpx fastmcp
 # The setup for apktool-mcp-server is done.
 ```
 
-## 🤖 2. Claude Desktop Setup
+## 2. Running on Local LLM Using Ollama and Zin MCP Client - Recommended
+
+<div align="center">
+    <a href="https://github.com/zinja-coder/zin-mcp-client">
+    <img alt="zin-mcp-client" height="360px" widht="480px" src="https://github.com/user-attachments/assets/0e8e0ecd-0520-422e-a007-03dc62c4118e">
+    </a>
+</div>
+
+⚡ Lightweight, Fast, Simple, CLI-Based MCP Client for STDIO MCP Servers, to fill the gap and provide bridge between your local LLMs running Ollama and MCP Servers.
+
+Check Now: https://github.com/zinja-coder/zin-mcp-client
+
+Demo: Coming soon...
+
+## 🤖 3. Claude Desktop Setup
 
 Make sure Claude Desktop is running with MCP enabled.
 
@@ -219,14 +233,6 @@ Replace:
 repository
 
 Then, navigate code and interact via real-time code review prompts using the built-in integration.
-
-## Running on Local LLM Using Ollama and Custom MPC Client
-
-!Coming Soon...
-
-## Running on Local LLM using Ollama and Open Web UI
-
-Read this Guide: https://github.com/zinja-coder/jadx-ai-mcp/blob/jadx-ai/README.md#running-on-local-llm-using-ollama-and-open-web-ui
 
 ## To report bugs, issues, feature suggestion, Performance issue, general question, Documentation issue.
  - Kindly open an issue with respective template.
