@@ -35,11 +35,10 @@ Watch the demo!
 
 https://github.com/user-attachments/assets/d50251b8-6b1c-4341-b18e-ae54eb24a847
 
-# Other MCP Servers For Android Reverse Engineering 
-
- - [JADX-MCP-SERVER](https://github.com/zinja-coder/jadx-ai-mcp)
-
-<!-- Place youtube video -->
+## Other projects in Zin MCP Suite
+ - **[JADX-AI-MCP](https://github.com/zinja-coder/jadx-ai-mcp)**
+ - **[JADX-MCP-Server](https://github.com/zinja-coder/jadx-mcp-server)**
+ - **[ZIN-MCP-Client](https://github.com/zinja-coder/zin-mcp-client)**
 
 ## Current MCP Tools
 
