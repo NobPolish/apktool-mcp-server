@@ -35,6 +35,13 @@ Watch the demo!
 
 https://github.com/user-attachments/assets/d50251b8-6b1c-4341-b18e-ae54eb24a847
 
+- **Solving the CTFs**
+
+
+
+https://github.com/user-attachments/assets/c783a604-a636-4e70-9fa8-37e3d219b20b
+
+
 ## Other projects in Zin MCP Suite
  - **[JADX-AI-MCP](https://github.com/zinja-coder/jadx-ai-mcp)**
  - **[JADX-MCP-Server](https://github.com/zinja-coder/jadx-mcp-server)**
