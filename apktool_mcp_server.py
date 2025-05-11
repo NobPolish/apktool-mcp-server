@@ -34,7 +34,7 @@ mcp = FastMCP("APKTool-MCP Server")
 WORKSPACE_DIR = os.environ.get("APKTOOL_WORKSPACE", os.path.join("apktool_mcp_server_workspace"))
 
 # Ensure workspace directory exists
-os.makedirs(WORKSPACE_DIR, exists_ok=True)
+os.makedirs(WORKSPACE_DIR, exist_ok=True)
 
 
 # Helper function to run APKTool commands
@@ -756,26 +756,3 @@ async def clean_project(project_dir: str, backup: bool = True) -> Dict:
 
 if __name__ == "__main__":
     mcp.run(transport="stdio")
-
-# changelog
-
-# removed mcp tool list_workspace_projects
-# removed method get directory size
-# removed method get_package_name_from
-# added name and description in all mcp tools
-# removed output_dir option from decode apk mcp tool
-# Re-formatted code for better code reading
-# removed mcp tool check apktool version
-# removed following mcp tools to optimize the performance and logic of apktool mcp server
-# sign_apk
-# install_apk
-# extract_dex
-# get_available_devices
-# list_packages
-# the mcp tools depends of tools other than apktool, so it does not make sense to keep them here
-# removed following mcp tool analyze permissions because same can be achieved trough the fetch manifest.xml mcp tool
-# removed following mcp tools they are redundant and over engineered
-# create_project
-# delete_project
-# compare_smali_files
-# importing time directly into mcp tool
