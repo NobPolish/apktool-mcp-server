@@ -45,7 +45,6 @@ https://github.com/user-attachments/assets/d50251b8-6b1c-4341-b18e-ae54eb24a847
 The following MCP tools are available:
 
 - `build_apk()` — Build an APK from a decoded APKTool Project.
-- `list_workspace_projects()` — List all APKTool project direcotries in workspace. 
 - `get_manifest()` — Get the AndroidManifest.xml content from a decoded APK project. 
 - `get_apktool_yml()` — Get apktool.yml information from a decoded APK project. 
 - `list_smali_directories()` — List all smali directories in a project. 
@@ -56,17 +55,7 @@ The following MCP tools are available:
 - `get_resource_file()` — Get Content of a specific resource file. 
 - `modify_resource_file()` — Modify the content of a specific resource file. 
 - `search_in_file()` — Search for a pattern in files with specified extensions. 
-- `check_apktool_version()` — Check the installed APKTool version.
-- `sign_apk()` — Sign an APK file. 
-- `install_apk()` — Install and APK on a connected device using ADB. **// to be migrated to upcoming ADB MCP Server**
-- `extract_dex()` — Extract DEX files from original APK (if available in project).
-- `list_packages()` — List installed packages on a connected Android device using ADB. **// to be migrated to upcoming ADB MCP Server**
-- `analyze_permissions()` —  Analyze permissions declared in AndroidManifest.xml.
 - `clean_project()` — Clean a project directory to prepare for rebuilding.
-- `create_project()` — Create a new empty APKTool project structure.
-- `delete_project()` — Delete an APKTool project directory
-- `compare_smali_files()` — Compare two smali files and show differences.
-- `get_available_devices()` — Get list of available Android devices connected via ADB **// to be migrated to upcoming ADB MCP Server**
 - `decode_apk()` — Decode an APK file using APKTool, extracting resources and smali code. 
 
 ---
