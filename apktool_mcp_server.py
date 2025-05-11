@@ -115,9 +115,12 @@ async def decode_apk(apk_path: str, force: bool = True, no_res: bool = False, no
     result = run_command(command)
 
     if result["success"]:
-        result["project_dir"] = output_dir
-    
-    return result
+        return {
+            "success": True,
+            "output_dir": output_dir
+        }
+    else:
+        return result
 
 @mcp.tool(name="build_apk", description="Build an APK file from a decoded APKTool project.")
 async def build_apk(project_dir: str, output_apk: Optional[str] = None, debug: bool = True, force_all: bool = False) -> Dict:
