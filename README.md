@@ -16,7 +16,7 @@
 <!-- It is a still in early stage of development, so expects bugs, crashes and logical erros.-->
 
 <div align="center">
-    <img alt="banner" height="480px" widht="620px" src="docs/assets/apktool-mcp-server-banner.png">
+    <img alt="banner" height="480px" widht="620px" src="https://github.com/user-attachments/assets/eb9037f2-d1c7-45e0-8871-ca8aaade0dd0">
 </div>
 
 <!--![apktool-mcp-server-banner.png](docs/assets/apktool-mcp-server-banner.png)-->
