@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/zinja-coder-apktool-mcp-server-badge.png)](https://mseep.ai/app/zinja-coder-apktool-mcp-server)
+
 <div align="center">
 
 # apktool-mcp-server (Part of Zin's Reverse Engineering MCP Suite)
