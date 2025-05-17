@@ -277,9 +277,11 @@ Use responsibly. Respect intellectual property. Follow ethical hacking practices
 - Built something on top? DM me or mention me — I’ll add it to the README!
 
 ---
+## Audited and Received Assessment Badge
 
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/zinja-coder-apktool-mcp-server-badge.png)](https://mseep.ai/app/zinja-coder-apktool-mcp-server)
 
+Thank you Mseep.net for auditing and providing Assessment Badge.
 ---
 
 Built with ❤️ for the reverse engineering and AI communities.
