@@ -144,15 +144,19 @@ The following MCP tools are available:
 ---
 
 ## 🛠️ Getting Started 
-
 ### 1. Downlaod from Releases: https://github.com/zinja-coder/apktool-mcp-server/releases
 
-
 ```bash
-# 0. Download the apktool-mcp-server-<version>.zip
+# 0. Download and install apktool
+https://apktool.org/docs/install
+
+# 1. Test whether apktool has been correctly configured in the environment variables
+$ apktool -version
+
+# 2. Download the apktool-mcp-server-<version>.zip
 https://github.com/zinja-coder/apktool-mcp-server/releases
 
-# 1. 
+# 3. 
 unzip apktool-mcp-server-<version>.zip
 
 ├apktool-mcp-server/
@@ -161,10 +165,10 @@ unzip apktool-mcp-server-<version>.zip
   ├── README.md
   ├── LICENSE
 
-# 2. Navigate to apktool-mcp-server directory
+# 4. Navigate to apktool-mcp-server directory
 cd apktool-mcp-server
 
-# 3. This project uses uv - https://github.com/astral-sh/uv instead of pip for dependency management.
+# 5. This project uses uv - https://github.com/astral-sh/uv instead of pip for dependency management.
     ## a. Install uv (if you dont have it yet)
 curl -LsSf https://astral.sh/uv/install.sh | sh
     ## b. OPTIONAL, if for any reasons, you get dependecy errors in apktool-mcp-server, Set up the environment
@@ -228,6 +232,21 @@ Replace:
 repository
 
 Then, navigate code and interact via real-time code review prompts using the built-in integration.
+
+## 4. Cherry Studio Setup
+
+If you want to configure the MCP tool in Cherry Studio, you can refer to the following configuration.
+- Type: stdio
+- command: uv
+- argument:
+```bash
+--directory
+path/to/apktool-mcp-server
+run
+apktool_mcp_server.py
+```
+- `path/to/apktool-mcp-server` with the absolute path to where you cloned this
+repository
 
 ## To report bugs, issues, feature suggestion, Performance issue, general question, Documentation issue.
  - Kindly open an issue with respective template.
