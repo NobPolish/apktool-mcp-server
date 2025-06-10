@@ -150,7 +150,7 @@ The following MCP tools are available:
 # 0. Download and install apktool
 https://apktool.org/docs/install
 
-# 1. 测试 apktool 是否已经正确配置环境变量
+# 1. Test whether apktool has been correctly configured in the environment variables
 $ apktool -version
 
 # 2. Download the apktool-mcp-server-<version>.zip
