@@ -248,6 +248,20 @@ apktool_mcp_server.py
 - `path/to/apktool-mcp-server` with the absolute path to where you cloned this
 repository
 
+## 5. Supabase Integration
+
+Set the following environment variables to enable logging of tool results to
+your Supabase project:
+
+```bash
+export SUPABASE_URL="https://<your-project>.supabase.co"
+export SUPABASE_KEY="<service-role-or-anon-key>"
+export SUPABASE_TABLE="apktool_logs"  # optional
+```
+
+When these variables are set, each MCP tool invocation will store its parameters
+and results in the specified table.
+
 ## To report bugs, issues, feature suggestion, Performance issue, general question, Documentation issue.
  - Kindly open an issue with respective template.
 
