@@ -250,8 +250,15 @@ repository
 
 ## 5. Supabase Integration
 
-Set the following environment variables to enable logging of tool results to
-your Supabase project:
+Run the setup wizard to configure your Supabase credentials:
+
+```bash
+python supabase_integration.py
+```
+
+The wizard will ask for your project URL, API key and an optional table name.
+Your answers are saved to `supabase_config.json` so you only need to run the
+wizard once. You can also set these values manually using environment variables:
 
 ```bash
 export SUPABASE_URL="https://<your-project>.supabase.co"
@@ -259,8 +266,8 @@ export SUPABASE_KEY="<service-role-or-anon-key>"
 export SUPABASE_TABLE="apktool_logs"  # optional
 ```
 
-When these variables are set, each MCP tool invocation will store its parameters
-and results in the specified table.
+When configured, each MCP tool invocation stores its parameters and results in
+the specified table.
 
 ## To report bugs, issues, feature suggestion, Performance issue, general question, Documentation issue.
  - Kindly open an issue with respective template.
