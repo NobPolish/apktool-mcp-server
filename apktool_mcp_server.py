@@ -16,6 +16,8 @@ import shutil
 from typing import List, Union, Dict, Optional
 
 from mcp.server.fastmcp import FastMCP
+from supabase_integration import init_supabase, log_result
+from functools import wraps
 
 # set up logging configuration
 logger = logging.getLogger()
@@ -35,6 +37,27 @@ WORKSPACE_DIR = os.environ.get("APKTOOL_WORKSPACE", os.path.join("apktool_mcp_se
 
 # Ensure workspace directory exists
 os.makedirs(WORKSPACE_DIR, exist_ok=True)
+
+# Initialize Supabase client if credentials are provided
+init_supabase()
+
+
+def supabase_logger(func):
+    """Decorator to log tool results to Supabase."""
+    @wraps(func)
+    async def wrapper(*args, **kwargs):
+        result = await func(*args, **kwargs)
+        try:
+            param_names = func.__code__.co_varnames[:func.__code__.co_argcount]
+            params = {name: val for name, val in zip(param_names, args)}
+            params.update(kwargs)
+            log_result(func.__name__, params, result)
+        except Exception as e:
+            logger.error(f"Supabase logging error for {func.__name__}: {e}")
+        return result
+
+    return wrapper
+
 
 
 # Helper function to run APKTool commands
@@ -82,6 +105,7 @@ def run_command(command: List[str], timeout: int = 300) -> Dict[str, Union[str, 
 # MCP Tools
 
 @mcp.tool(name="decode_apk", description="Decode an APK file using APKTool")
+@supabase_logger
 async def decode_apk(apk_path: str, force: bool = True, no_res: bool = False, no_src: bool = False) -> Dict:
     """
     Decode an APK file using APKTool, extracting resources and smali code.
@@ -123,6 +147,7 @@ async def decode_apk(apk_path: str, force: bool = True, no_res: bool = False, no
         return result
 
 @mcp.tool(name="build_apk", description="Build an APK file from a decoded APKTool project.")
+@supabase_logger
 async def build_apk(project_dir: str, output_apk: Optional[str] = None, debug: bool = True, force_all: bool = False) -> Dict:
     """
     Build an APK file from a decoded APKTool project.
@@ -167,6 +192,7 @@ async def build_apk(project_dir: str, output_apk: Optional[str] = None, debug: b
     return result
 
 @mcp.tool(name="get_manifest", description="Get the AndroidManifest.xml content from a decoded APK project.")
+@supabase_logger
 async def get_manifest(project_dir: str) -> Dict:
     """
     Get the AndroidManifest.xml content from a decoded APK project.
@@ -202,6 +228,7 @@ async def get_manifest(project_dir: str) -> Dict:
         }
 
 @mcp.tool(name="get_apktool_yml", description="Get apktool.yml information from a decoded APK project.")
+@supabase_logger
 async def get_apktool_yml(project_dir: str) -> Dict:
     """
     Get apktool.yml information from a decoded APK project.
@@ -237,6 +264,7 @@ async def get_apktool_yml(project_dir: str) -> Dict:
         }
 
 @mcp.tool(name="list_smali_directories", description="List all smali directories in a project")
+@supabase_logger
 async def list_smali_directories(project_dir: str) -> Dict:
     """
     List all smali directories in a project.
@@ -272,6 +300,7 @@ async def list_smali_directories(project_dir: str) -> Dict:
         }
 
 @mcp.tool(name="list_smali_files", description="List smali files in a specific smali directory, optionally filtered by package prefix.")
+@supabase_logger
 async def list_smali_files(project_dir: str, smali_dir: str = "smali", package_prefix: Optional[str] = None) -> Dict:
     """
     List smali files in a specific smali directory, optionally filtered by package prefix.
@@ -346,6 +375,7 @@ async def list_smali_files(project_dir: str, smali_dir: str = "smali", package_p
         }
 
 @mcp.tool(name="get_smali_file", description="Get content of a specific smali file by class name.")
+@supabase_logger
 async def get_smali_file(project_dir: str, class_name: str) -> Dict:
     """
     Get content of a specific smali file by class name.
@@ -401,6 +431,7 @@ async def get_smali_file(project_dir: str, class_name: str) -> Dict:
         }
 
 @mcp.tool(name="modify_smali_file", description="Modify the content of a specific smali file.")
+@supabase_logger
 async def modify_smali_file(project_dir: str, class_name: str, new_content: str, create_backup: bool = True) -> Dict:
     """
     Modify the content of a specific smali file.
@@ -469,6 +500,7 @@ async def modify_smali_file(project_dir: str, class_name: str, new_content: str,
         }
 
 @mcp.tool(name="list_resources", description="List resources in a project, optionally filtered by resource type.")
+@supabase_logger
 async def list_resources(project_dir: str, resource_type: Optional[str] = None) -> Dict:
     """
     List resources in a project, optionally filtered by resource type.
@@ -549,6 +581,7 @@ async def list_resources(project_dir: str, resource_type: Optional[str] = None) 
         }
     
 @mcp.tool(name="get_resource_file", description="Get content of a specific resource file.")
+@supabase_logger
 async def get_resource_file(project_dir: str, resource_type: str, resource_name: str) -> Dict:
     """
     Get content of a specific resource file.
@@ -597,6 +630,7 @@ async def get_resource_file(project_dir: str, resource_type: str, resource_name:
         }
 
 @mcp.tool(name="modify_resource_file", description="Modify the content of a specific resource file.")
+@supabase_logger
 async def modify_resource_file(project_dir: str, resource_type: str, resource_name: str, new_content: str, create_backup: bool = True) -> Dict:
     """
     Modify the content of a specific resource file.
@@ -645,6 +679,7 @@ async def modify_resource_file(project_dir: str, resource_type: str, resource_na
         }
     
 @mcp.tool(name="search_in_files", description="Search for a pattern in files specified extensions.")
+@supabase_logger
 async def search_in_files(project_dir: str, search_pattern: str, file_extensions: List[str] = [".smali", ".xml"], max_results: int = 100) -> Dict:
     """
     Search for a pattern in files with specified extensions.
@@ -706,6 +741,7 @@ async def search_in_files(project_dir: str, search_pattern: str, file_extensions
         }
 
 @mcp.tool(name="clean_project", description="Clean a project directory to prepare for rebuilding.")
+@supabase_logger
 async def clean_project(project_dir: str, backup: bool = True) -> Dict:
     """
     Clean a project directory to prepare for rebuilding.

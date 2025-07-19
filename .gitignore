@@ -60,3 +60,7 @@ target/
 
 ### dependecy ###
 lib/
+
+# Node projects
+node_modules/
+frontend/dist/

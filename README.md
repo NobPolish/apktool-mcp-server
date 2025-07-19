@@ -248,6 +248,45 @@ apktool_mcp_server.py
 - `path/to/apktool-mcp-server` with the absolute path to where you cloned this
 repository
 
+## 5. Supabase Integration
+
+Run the setup wizard to configure your Supabase credentials:
+
+```bash
+python supabase_integration.py
+```
+
+The wizard will ask for your project URL, API key and an optional table name.
+Your answers are saved to `supabase_config.json` so you only need to run the
+wizard once. You can also set these values manually using environment variables:
+
+```bash
+export SUPABASE_URL="https://<your-project>.supabase.co"
+export SUPABASE_KEY="<service-role-or-anon-key>"
+export SUPABASE_TABLE="apktool_logs"  # optional
+```
+
+When configured, each MCP tool invocation stores its parameters and results in
+the specified table.
+
+## 6. React Frontend (optional)
+
+An example React user interface lives in `frontend/` and communicates with the
+API provided by `web_api.py`.
+
+1. Start the API server:
+   ```bash
+   python web_api.py
+   ```
+2. In another terminal install dependencies and launch the UI:
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   The app will open at `http://localhost:5173` and proxy API requests to
+   `http://localhost:8000`.
+
 ## To report bugs, issues, feature suggestion, Performance issue, general question, Documentation issue.
  - Kindly open an issue with respective template.
 
