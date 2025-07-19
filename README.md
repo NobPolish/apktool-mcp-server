@@ -290,6 +290,8 @@ API provided by `web_api.py`.
 
 A proposal for maintaining a "living" history of the project is available in [docs/LIVING_CHRONICLE_SYSTEM_DESIGN_AND_MULTI_LAYERED_NARRATIVE_FRAMEWORK.md](docs/LIVING_CHRONICLE_SYSTEM_DESIGN_AND_MULTI_LAYERED_NARRATIVE_FRAMEWORK.md). It describes how automated logs and an interactive site can narrate progress over time.
 
+Design details for the future web interface are outlined in [docs/LIVING_INTERFACE_DESIGN_SPECIFICATION_AND_INTERACTION_BLUEPRINT.md](docs/LIVING_INTERFACE_DESIGN_SPECIFICATION_AND_INTERACTION_BLUEPRINT.md).
+
 
 ## To report bugs, issues, feature suggestion, Performance issue, general question, Documentation issue.
  - Kindly open an issue with respective template.
